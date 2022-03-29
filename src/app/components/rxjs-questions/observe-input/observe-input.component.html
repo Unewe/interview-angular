@@ -1,0 +1,10 @@
+<div>
+  <mat-form-field class="example-form-field" appearance="outline">
+    <mat-label>Input</mat-label>
+    <input #inputRef matInput type="text" [formControl]="field">
+  </mat-form-field>
+</div>
+
+<div *ngFor="let str of strings">
+  {{str}}
+</div>
