@@ -13,8 +13,8 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) {
   }
 
-  links = ['/focus-input', '/multiple-directives', '/observe-input'];
-  labels = ['Focus Input', 'Multiple Directives', 'Observe Input'];
+  links = ['/focus-input', '/multiple-directives', '/ng-templates', '/subscribe-observable', '/observe-input'];
+  labels = ['Focus Input', 'Multiple Directives', 'Ng Templates', 'Subscribe', 'Observe Input'];
   activeLink: string | undefined;
 
   ngOnInit(): void {

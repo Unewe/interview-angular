@@ -1,0 +1,11 @@
+<mat-checkbox [(ngModel)]="show">Show users</mat-checkbox>
+<!--Увидим ли мы список пользователей?-->
+<ng-container *ngIf="show; then usersTemplate; else toggleHint"></ng-container>
+
+<ng-template #usersTemplate [ngIf]="show" [ngIfElse]="toggleHint">
+  <div *ngFor="let user of users">{{user}}</div>
+</ng-template>
+
+<ng-template #toggleHint>
+  <div>Toggle users checkbox!</div>
+</ng-template>

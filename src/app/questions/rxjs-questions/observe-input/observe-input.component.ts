@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FormControl} from "@angular/forms";
-import {concatMap, fromEvent, map, mergeMap, switchMap} from "rxjs";
+import {fromEvent, map, mergeMap} from "rxjs";
 import {FakeService} from "../../../services/fake/fake.service";
 import {UntilDestroy, untilDestroyed} from "@ngneat/until-destroy";
 
@@ -23,14 +23,14 @@ export class ObserveInputComponent implements OnInit, AfterViewInit {
   }
 
   // TODO-1: Убрать дубликаты.
-  // TODO-2: Выполнять запрос с задержкой.
+  // TODO-2: Выполнять запрос после задержки ввода.
   ngAfterViewInit(): void {
     if (this.ref) {
       fromEvent(this.ref.nativeElement, 'keyup')
         .pipe(
           untilDestroyed(this),
           map(event => (<HTMLInputElement>event.target).value),
-          concatMap(value => this.fakeService.getString(value)),
+          mergeMap(value => this.fakeService.getString(value)),
         )
         .subscribe(value => {
           this.strings = [...this.strings, value];

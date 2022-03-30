@@ -1,0 +1,9 @@
+ul {
+  & > :not(li) {
+    color: red;
+  }
+
+  & > li {
+    color: green;
+  }
+}
