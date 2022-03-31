@@ -16,6 +16,7 @@ import { ObserveInputComponent } from './questions/rxjs-questions/observe-input/
 import { SubscribeObservableComponent } from './questions/rxjs-questions/subscribe-observable/subscribe-observable.component';
 import { NgTemplatesComponent } from './questions/angular-questions/ng-templates/ng-templates.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ArraysQuestionsComponent } from './questions/arrays-questions/arrays-questions.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MultipleDirectivesComponent,
     ObserveInputComponent,
     SubscribeObservableComponent,
-    NgTemplatesComponent
+    NgTemplatesComponent,
+    ArraysQuestionsComponent
   ],
   imports: [
     BrowserModule,

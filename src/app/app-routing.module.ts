@@ -7,6 +7,7 @@ import {
   SubscribeObservableComponent
 } from "./questions/rxjs-questions/subscribe-observable/subscribe-observable.component";
 import {NgTemplatesComponent} from "./questions/angular-questions/ng-templates/ng-templates.component";
+import {ArraysQuestionsComponent} from "./questions/arrays-questions/arrays-questions.component";
 
 const routes: Routes = [
   {path: "focus-input", component: FocusInputComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "ng-templates", component: NgTemplatesComponent},
   {path: "observe-input", component: ObserveInputComponent},
   {path: "subscribe-observable", component: SubscribeObservableComponent},
+  {path: "arrays", component: ArraysQuestionsComponent}
 ];
 
 @NgModule({
